@@ -12,6 +12,7 @@ async function run() {
     const description = core.getInput("description", {required: false});
     const env = core.getInput("environment", {required: false});
     const envUrl = core.getInput("environment-url", {required: false});
+    const auto_inactive = core.getInput("auto_inactive", {required: false}) || false;
 
     const client = new github.GitHub(token);
     const params = {
@@ -21,6 +22,7 @@ async function run() {
       log_url: url,
       target_url: url,
       description,
+      auto_inactive,
     };
     if (env) {
       params.environment = env;
