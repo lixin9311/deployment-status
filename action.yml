@@ -11,6 +11,8 @@ inputs:
     description: 'Log url location'
   description:
     description: 'Descriptive message about the deployment state'
+  auto_inactive:
+    description: 'auto set inactive'
   environment:
     description: 'Name for the target deployment environment, which can be changed when setting a deploy status.'
   environment-url:
