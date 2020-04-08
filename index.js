@@ -15,6 +15,7 @@ async function run() {
     const auto_inactive = core.getInput("auto_inactive", {required: false}) || false;
 
     const client = new github.GitHub(token);
+    console.log('auto_inactive:' + auto_inactive);
     const params = {
       ...context.repo,
       deployment_id: context.payload.deployment.id,
